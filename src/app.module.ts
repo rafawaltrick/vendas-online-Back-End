@@ -7,7 +7,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 @Module({
   imports: [
     ConfigModule.forRoot({
-      envFilePath: ['.env.development.local', '.env.development'],
+      envFilePath: ['.env.development.local'],
     }),
     TypeOrmModule.forRoot({
       type: 'postgres',
@@ -18,8 +18,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       username: process.env.DB_USERNAME,
       synchronize: true,
       entities: [`${__dirname}/**/*.entity{.js, .ts}`]
-    })
-    , 
+    }), 
     UserModule,
   ],
   controllers: [],
