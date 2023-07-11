@@ -26,8 +26,9 @@ exports.AppModule = AppModule = __decorate([
                 password: process.env.DB_PASSWORD,
                 port: Number(process.env.DB_PORT),
                 username: process.env.DB_USERNAME,
-                synchronize: true,
-                entities: [`${__dirname}/**/*.entity{.js, .ts}`]
+                entities: [`${__dirname}/**/*.entity{.js,.ts}`],
+                migrations: [`${__dirname}/migration/{.ts,*.js}`],
+                migrationsRun: true,
             }),
             user_module_1.UserModule,
         ],
