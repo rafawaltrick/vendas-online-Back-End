@@ -11,6 +11,9 @@ const common_1 = require("@nestjs/common");
 const user_module_1 = require("./user/user.module");
 const config_1 = require("@nestjs/config");
 const typeorm_1 = require("@nestjs/typeorm");
+const state_module_1 = require("./state/state.module");
+const city_module_1 = require("./city/city.module");
+const address_module_1 = require("./address/address.module");
 let AppModule = exports.AppModule = class AppModule {
 };
 exports.AppModule = AppModule = __decorate([
@@ -31,6 +34,9 @@ exports.AppModule = AppModule = __decorate([
                 migrationsRun: true,
             }),
             user_module_1.UserModule,
+            state_module_1.StateModule,
+            city_module_1.CityModule,
+            address_module_1.AddressModule,
         ],
         controllers: [],
         providers: [],
