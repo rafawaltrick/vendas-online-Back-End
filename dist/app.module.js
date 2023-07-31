@@ -14,6 +14,7 @@ const typeorm_1 = require("@nestjs/typeorm");
 const state_module_1 = require("./state/state.module");
 const city_module_1 = require("./city/city.module");
 const address_module_1 = require("./address/address.module");
+const cache_module_1 = require("./cache/cache.module");
 let AppModule = exports.AppModule = class AppModule {
 };
 exports.AppModule = AppModule = __decorate([
@@ -37,6 +38,7 @@ exports.AppModule = AppModule = __decorate([
             state_module_1.StateModule,
             city_module_1.CityModule,
             address_module_1.AddressModule,
+            cache_module_1.CacheModule,
         ],
         controllers: [],
         providers: [],
